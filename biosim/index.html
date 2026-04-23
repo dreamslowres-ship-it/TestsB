@@ -42,10 +42,10 @@
       <button type="button" id="paletteTabBtn" class="tool-btn active-tab" title="Paleta de colores">🎨</button>
       <button type="button" id="symbolsTabBtn" class="tool-btn" title="Símbolos especiales">✨</button>
       <button type="button" id="gradientTabBtn" class="tool-btn" title="Generador de degradados">🌈</button>
-      <button type="button" id="crownTabBtn" class="tool-btn" title="Aplicar corona">👑</button>
+      <button type="button" id="crownTabBtn" class="tool-btn" title="Insertar adorno para letra">፝֟</button>
     </div>
 
-    <!-- Panel unificado de herramientas (cambia según la pestaña activa) -->
+    <!-- Panel unificado de herramientas -->
     <div id="toolsPanel" class="tools-panel">
       <!-- Panel de paleta de colores -->
       <div id="palettePanel" class="panel-content active">
@@ -83,12 +83,11 @@
         </div>
       </div>
 
-      <!-- Panel de corona -->
+      <!-- Panel de corona (modificado) -->
       <div id="crownPanel" class="panel-content">
         <div class="crown-options">
-          <button class="crown-option" data-crown="×፝֟͜×">×፝֟͜× (estándar)</button>
-          <button class="crown-option" data-crown="ɪ፝֟">ɪ፝֟ (alternativo)</button>
-          <p class="panel-note">Envuelve el texto seleccionado</p>
+          <p class="panel-note">Inserta el adorno y luego escribe la letra que lo llevará encima.</p>
+          <button type="button" id="applyCrownBtn" class="action-btn">Insertar ፝֟ para siguiente letra</button>
         </div>
       </div>
     </div>
