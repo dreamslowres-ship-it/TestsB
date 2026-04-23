@@ -25,6 +25,9 @@
   const gradientColor2 = document.getElementById('gradientColor2');
   const applyGradientBtn = document.getElementById('applyGradientBtn');
 
+  // Corona
+  const applyCrownBtn = document.getElementById('applyCrownBtn');
+
   // ================== CONSTANTES ==================
   const MAX_CHARS = 50;
 
@@ -195,18 +198,16 @@
     insertAtCursor(newText, start, end);
   }
 
-  function applyCrown(style) {
+  // ================== FUNCIÓN DE CORONA (MODIFICADA - INSERCIÓN SIMPLE) ==================
+  function applyCrown() {
     const start = bioInput.selectionStart;
     const end = bioInput.selectionEnd;
-    const selectedText = bioInput.value.substring(start, end);
-    if (!selectedText) {
-      alert('Selecciona el texto que quieres decorar');
-      return;
-    }
-    const newText = style.includes('×፝֟͜×') 
-      ? `×፝֟͜${selectedText}×`
-      : `ɪ፝֟${selectedText}`;
-    insertAtCursor(newText, start, end);
+    
+    // Insertar el símbolo en la posición del cursor
+    const textToInsert = '፝֟';
+    insertAtCursor(textToInsert, start, end);
+    
+    // El cursor ya queda después del símbolo gracias a insertAtCursor
   }
 
   // ================== GENERADOR DE DEGRADADOS ==================
@@ -308,10 +309,10 @@
       insertAtCursor(gradientCode, start, start);
     });
 
-    // Corona
-    document.querySelectorAll('.crown-option').forEach(btn => {
-      btn.addEventListener('click', () => applyCrown(btn.dataset.crown));
-    });
+    // Corona (inserción simple)
+    if (applyCrownBtn) {
+      applyCrownBtn.addEventListener('click', applyCrown);
+    }
 
     // Copiar
     copyBtn.addEventListener('click', async () => {
