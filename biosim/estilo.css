@@ -208,7 +208,7 @@ body {
   font-size: 0.7rem;
   color: var(--mist);
   text-align: center;
-  margin-top: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 /* Paleta de colores (cubitos) */
@@ -313,23 +313,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
-}
-
-.crown-option {
-  background: var(--deep);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 0.7rem 1rem;
-  color: var(--silver);
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.2s;
-  text-align: center;
-}
-
-.crown-option:hover {
-  background: var(--v1);
-  color: white;
 }
 
 /* Copy button */
